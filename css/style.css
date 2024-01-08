@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgb(31, 255, 98), #68a7ff);
+    font-family: 'Roboto', sans-serif;
+}	
+
+.piano {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.25);
+    background: linear-gradient(rgb(55, 55, 55), #1f1f1f);
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.piano_controls {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.piano_keys {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.key {
+    cursor:pointer;
+    box-sizing: border-box;
+    width: 60px; /* Increase the width of the keys */
+    height: 150px;
+    border: 1px solid #000;
+    margin-right: 3px;
+    position: relative;
+    text-align: center;
+    line-height: 150px;
+    user-select: none;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.25)   ;
+}
+
+.key.white {
+    background-color: white;
+    flex-grow: 1;
+    border-radius: 5px;
+    border-bottom: 8px solid #ddd;
+    color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.key.black {
+    width: 32px; /* Adjust the width of the black keys */
+    background: linear-gradient(black, #333);
+    height: 100px;
+    margin-right: -17px;
+    margin-left: -20px;
+    color: #fff;
+    z-index: 2;
+}
+
+.key span {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.key:active {
+    box-shadow: 0 2px rgba(0, 0, 0, 0.6);
+    transform: translateY(2px);
+    background-color:grey;
+}
+
+.pressed {
+    box-shadow: 0 2px rgba(0, 0, 0, 0.6);
+    transform: translateY(2px);
+    background-color: grey; /* ou qualquer outro estilo que você deseja aplicar */
+}
+
+.music-sheet-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#musicSheet {
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    resize: none;
+}
